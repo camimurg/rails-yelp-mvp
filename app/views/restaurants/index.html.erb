@@ -1,1 +1,8 @@
-<%=  @restaurants %>
+<h1>Restaurants</h1>
+<br>
+<ul>
+<%  @restaurants.each do |restaurant| %>
+<li> <%= link_to restaurant.name.capitalize, restaurant_path(restaurant) %> </li>
+<% end %>
+</ul>
+<%= link_to '+ Add a new restaurant', "/restaurants/new" %>
