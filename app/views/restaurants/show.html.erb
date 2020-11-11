@@ -6,4 +6,6 @@
 
 <p> <%= @restaurant.phone_number %> </p>
 
-<%= link_to "Back to the restaurants", "/restaurants" %>
+<%= link_to "Add a review", new_restaurant_review_path(@restaurant) %>
+<br>
+<%= link_to "Back to the restaurants", restaurants_path %>
